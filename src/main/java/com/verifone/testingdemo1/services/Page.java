@@ -5,4 +5,5 @@ import lombok.Data;
 @Data
 public class Page {
     int count;
+    int qty;
 }
