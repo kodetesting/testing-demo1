@@ -32,7 +32,7 @@ jobs:
           -Dsonar.organization=${{vars.SONAR_ORG}} 
           -Dsonar.projectKey=${{vars.SONAR_PROJECT_KEY}} 
           -Dsonar.host.url=${{vars.SONAR_HOST_URL}} 
-          -Dsonar.login=${{vars.SONAR_LOGIN}} 
+          -Dsonar.login=${{secrets.SONAR_TOKEN}} 
         
 
   Analysis:
