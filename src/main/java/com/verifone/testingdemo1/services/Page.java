@@ -6,4 +6,6 @@ import lombok.Data;
 public class Page {
     int count;
     int qty;
+    int computed;
+    int id;
 }
