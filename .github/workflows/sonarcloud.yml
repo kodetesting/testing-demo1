@@ -25,7 +25,7 @@ jobs:
       - name: Coverage
         run: mvn sonar:sonar -Pcoverage \
               -Dsonar.organization=${{vars.SONAR_ORG}} \
-              -Dsonar.projectKey=kodetesting_testing-demo1 \
+              -Dsonar.projectKey=${{vars.SONAR_PROJECT_KEY}} \
               -Dsonar.host.url=${{vars.SONAR_HOST_URL}} \
               -Dsonar.login=${{vars.SONAR_LOGIN}}
         
@@ -47,7 +47,7 @@ jobs:
           args:
             # Unique keys of your project and organization. You can find them in SonarCloud > Information (bottom-left menu)
             # mandatory
-            -Dsonar.projectKey=kodetesting_testing-demo1
+            -Dsonar.projectKey=${{vars.SONAR_PROJECT_KEY}}
             -Dsonar.organization=${{vars.SONAR_ORG}}
             #-Dsonar.sources=./src/main/java 
             #-Dsonar.tests=src/test/java
