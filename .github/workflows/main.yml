@@ -23,5 +23,7 @@ jobs:
           -Dsonar.organization=${{vars.SONAR_ORG}} 
           -Dsonar.projectKey=${{vars.SONAR_PROJECT_KEY}} 
           -Dsonar.host.url=${{vars.SONAR_HOST_URL}} 
-          -Dsonar.login=${{secrets.SONAR_TOKEN}} 
+          -Dsonar.login=${{secrets.SONAR_TOKEN}}
+      - name: List files
+        run: ls -R
     
